@@ -1,101 +1,142 @@
-*{
-    margin:0px;
+* {
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family:sans-serif;
     border: none;
-    outline: none;
     border-radius: 10px;
-   
+    outline: none;
+    font-size: 1rem;
 }
 
-body{
-    align-items: center;
+body {
+   
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
-    height: 80vh;
-    
+    height: 100vh;
 }
 
-.heading{
+.heading {
+    font-family:monospace;
     text-align: center;
+    font-size: 2rem;
     text-transform: uppercase;
-    color: rgb(3, 2, 2);
-    
 }
-.container{
-    background-color: rgb(76, 145, 111);
+
+.container {
+    background-color: rgba(215, 236, 250, 0.7);
     display: grid;
-    padding: 30px 40px;
-    
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
-input{
+
+.input-heading {
+    padding: 0px 0px 20px;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: serif;
+    word-spacing: 5px;
+}
+
+input {
     padding: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     border: none;
+    border-radius: 10px;
     outline: none;
     text-transform: uppercase;
 }
-.selection{
+
+input:focus {
+    background-color: rgb(33, 101, 124);
+    border: 1px solid rgb(160, 20, 65);
+}
+
+.selection {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 30px;
-}
-select{
-    padding: 10px;
-    outline: none;
-    transition: 0.2s;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-#in-base{
+
+select {
+    padding: 10px;
+    outline: none;
+    transition: transform 0.2s;
+}
+
+#input-base {
     margin-right: 10px;
 }
 
-#out-base{
+#output-base {
     margin-left: 10px;
 }
-.btn{
+
+.buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-button{
-    padding: 5px;
-    cursor: pointer;
-    border: none;
+button {
+    padding: 6px;
     margin-bottom: 20px;
+    font-size: 1.5rem;
     border-radius: 10px;
-    font-size: 1.2rem;
-    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#swap {
+    width: 150px;
+    background-color: rgb(194, 222, 243);
+    color: rgb(0, 136, 255);
+    border: 1px solid rgb(94, 141, 182);
+}
+
+#swap:hover {
+    background-color: rgb(234, 225, 225);
 }
 .arrow{
     align-items: center;
-    padding: 5px 0;
-    
-}
-#output{
-    width: 700px;
-    height: 50px;
-    padding: 5px 5px;
+    padding: 5px 0;    
 }
 
-#btn-swap{
-    width: 100px;
-    background-color:blanchedalmond;
-    color: black;
-    border: 1px solid rebeccapurple;
+#convert {
+    align-self: stretch;
+    background-color: rgb(90, 169, 177);
+    color: rgb(160, 190, 199);
+    border: 1px solid rgb(144, 26, 122);
 }
-#btn-swap:hover{
-    background-color: gold;
+
+#convert:hover {
+    background-color: rgb(234, 225, 225);
 }
-#btn-convert{
-    align-self:stretch ;
+
+textarea {
+    padding: 10px;
+    transition: all 0.3s;
+    height: auto;
 }
-#btn-convert:hover{
-    background-color: gold;
+
+textarea:hover {
+    background-color: rgb(234, 225, 225);
+}
+
+#error {
+    display: none;
+    padding: 10px;
+    background-color: beige;
+    width: 60%;
+    background-color: rgb(231, 184, 184);
+    color: rgb(186, 130, 130);
+    border: 1px solid rgb(60, 127, 183);
 }
 
 @media (max-width : 500px) {
@@ -103,10 +144,15 @@ button{
         font-size: 1.5rem;
     }
 
+    .input-heading {
+        font-size: 1.3rem;
+    }
+
     .container {
         padding: 10px;
         width: 90%;
     }
+
     input {
         font-size: 1rem;
         padding: 10px;
@@ -124,15 +170,7 @@ button{
         padding : 5px
     }
 
-    
+    #error {
+        font-size: 1rem;
+    }
 }
-
-
-
-
-
-
-
-
-
-
